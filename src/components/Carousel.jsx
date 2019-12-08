@@ -79,12 +79,13 @@ class Carousel extends Component {
                               <p className="my-4 text-secondary">
                                 {offer.description}
                               </p>
-                              <NavLink
-                                to=""
+                              <a
+                                href="https://www.ubereats.com/en-FR/paris/food-delivery/restaurant-istanbul/yqzOvaZ5R-66_Np9OKHolg/b592d7b2-5da5-4a69-9eca-6365c0123fd2/"
                                 className="my-5 btn menu-button text-uppercase"
+                                target="_blank"
                               >
                                 Commandez maintenant
-                              </NavLink>
+                              </a>
                             </div>
                           </div>
                         </div>
