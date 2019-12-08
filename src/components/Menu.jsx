@@ -22,7 +22,7 @@ import sandwichChikenChika from "../Assets/images/menu-images/sandwich-chicken-c
 import sandwichSteackFromage from "../Assets/images/menu-images/sandwich-steack-fromage.jpg";
 import sandwichMerguez from "../Assets/images/menu-images/sandwich-merguez.jpg";
 import sandwichBrochetteAgneau from "../Assets/images/menu-images/sandwich-brochettes-agneau.png";
-import cheeseburger from "../Assets/images/menu-images/cheeseburger.jpg";
+import cheeseburger from "../Assets/images/menu-images/burger.jpg";
 
 import OurServices from "./OurServices";
 import Carousel from "./Carousel";
