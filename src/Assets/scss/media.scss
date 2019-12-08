@@ -45,6 +45,12 @@ $mid-black-color: #707070;
   }
 }
 @media (min-width: 360px) and (max-width: 660px) {
+  .buttons {
+    display: inline !important;
+    .btn {
+      margin-top: 10px;
+    }
+  }
   .menu {
     .each-menu {
       .col-menu-img {
