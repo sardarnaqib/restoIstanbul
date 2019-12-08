@@ -53,7 +53,7 @@ class Navbar extends Component {
       </header>
     );
   }
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     window.removeEventListener("scroll", () => {});
   }
 
