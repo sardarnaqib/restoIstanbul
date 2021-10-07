@@ -1,0 +1,42 @@
+$primary-color: #f3705a;
+$sec-color: #ffd15c;
+$black-color: #000000;
+$mid-black-color: #707070;
+
+.text404 {
+    font-size: 12em;
+    color: $primary-color;
+    text-shadow: 2px 5px #454545;
+}
+.bottomSpace {
+    padding-bottom: 6em;
+}
+
+.menu-button,
+.prim-button {
+    border-radius: 50px !important;
+    padding: 8px 30px !important;
+    font-size: 18px !important;
+}
+.display-3 {
+    font-weight: 500;
+}
+.bg-prim {
+    background-color: $primary-color !important;
+}
+.bg-black {
+    background-color: #000000;
+}
+
+.carousel-inner {
+    position: relative;
+    background-color: rgba($color: $black-color, $alpha: 0.8);
+    color: #fff;
+    .container {
+        overflow: hidden;
+    }
+    .offer-title {
+        font-size: 60px;
+        font-weight: bold;
+    }
+}

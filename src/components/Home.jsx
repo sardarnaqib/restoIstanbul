@@ -1,54 +1,81 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import OurServices from "./OurServices";
 import Menu from "./Menu";
 import Carousel from "./Carousel";
-import Navbar from "./Navbar";
+import Navbar, { Phone, UberEats } from "./Navbar";
 import Contact from "./Contact";
+import styled from "styled-components";
+import homeBgImage from "../Assets/images/kebab2.jpg";
 
-class Home extends Component {
-  static defaultProps = {
-    title: "chez nous vous trouvez le meilleur goût",
-    style: ""
-  };
+const StyledHome = styled.div`
+    height: 100vh;
+    & .home-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        margin: auto;
 
-  render() {
+        p {
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+    }
+    @media (min-width: 660px) {
+        .home-text {
+            width: 600px;
+        }
+    }
+`;
+const SmallScreen = styled.div`
+    display: none;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    flex-direction: flex-row;
+    justify-content: space-between;
+    border-radius: 10px;
+    & > * {
+        color: #000;
+    }
+    @media (min-width: 360px) and (max-width: 990px) {
+        display: flex;
+    }
+`;
+const Home = () => {
     return (
-      <div className="w-100">
-        <div className="bg-image bottomSpace">
-          <Navbar />
-          <div className="container text-center text-white">
-            <div className="home-text">
-              <p>
-                vous pouvez trouver le meuilleur gout du kebab doner artisanal
-                au restaurant Istanbul Sp{String.fromCharCode(233)}cialit
-                {String.fromCharCode(233)}s Turques
-              </p>
-              <div className="buttons">
-                <Link className="btn menu-button" to="/menu">
-                  <span className="text-uppercase">Notre Menu</span>
-                </Link>
-                <a
-                  className="btn menu-button"
-                  href="https://www.ubereats.com/en-FR/paris/food-delivery/restaurant-istanbul/yqzOvaZ5R-66_Np9OKHolg/b592d7b2-5da5-4a69-9eca-6365c0123fd2/"
-                  target="_blank"
-                >
-                  <span className="text-uppercase">
-                    Commandez chez ubereats
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className="w-100">
+            <StyledHome
+                style={{
+                    background: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(${homeBgImage})`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                }}
+                className="bg-image bottomSpace"
+            >
+                <Navbar />
+                <div className="container text-center text-white">
+                    <SmallScreen>
+                        <UberEats />
+                        <Phone />
+                    </SmallScreen>
+                    <div className="home-text">
+                        <p>
+                            vous pouvez trouver le meuilleur gout du kebab doner
+                            artisanal au restaurant Istanbul Sp
+                            {String.fromCharCode(233)}cialit
+                            {String.fromCharCode(233)}s Turques
+                        </p>
+                    </div>
+                </div>
+            </StyledHome>
+            <OurServices />
+            <Menu />
+            <Carousel />
+            <Contact />
         </div>
-        <OurServices />
-        <Menu />
-        <Carousel />
-        <Contact />
-      </div>
     );
-  }
-  componentWillUnmount() {}
-}
+};
 
 export default Home;

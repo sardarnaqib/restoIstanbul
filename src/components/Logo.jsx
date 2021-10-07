@@ -1,20 +1,18 @@
 import React from "react";
 import logo from "../Assets/images/logo.svg";
 import { Link } from "react-router-dom";
-
+import styled from "styled-components";
+const StyledBrandImage = styled.div`
+    width: 80px;
+`;
 const Logo = () => {
-  return (
-    <Link className="navbar-brand d-flex justify-content-between" to="/">
-      <div className="brand-image">
-        <img className="img-fluid" src={logo} alt="Restaurant Turck" />
-      </div>
-      <div className="brand-name d-flex flex-column justify-content-center ml-2">
-        <h4 className="text-uppercase m-0 text-white">Restaurant</h4>
-        <h4 className="text-uppercase m-0 text-white">Istanbul</h4>
-        {/* <p className="m-0 text-white">spécialité turque</p> */}
-      </div>
-    </Link>
-  );
+    return (
+        <Link className="navbar-brand d-flex justify-content-between" to="/">
+            <StyledBrandImage className="brand-image">
+                <img className="img-fluid" src={logo} alt="Restaurant Turck" />
+            </StyledBrandImage>
+        </Link>
+    );
 };
 
 export default Logo;
