@@ -28,10 +28,11 @@ const StyledHome = styled.div`
         }
     }
 `;
-const SmallScreen = styled.div`
+export const SmallScreen = styled.div`
     display: none;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    // background: rgba(255, 255, 255, 0.2);
+    background: #eee;
     flex-direction: flex-row;
     justify-content: space-between;
     border-radius: 10px;

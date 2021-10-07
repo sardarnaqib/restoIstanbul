@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar";
+import Navbar, { Phone, UberEats } from "./Navbar";
 import homeBgImage from "../Assets/images/kebab2.jpg";
+import { SmallScreen } from "./Home";
 
 const StyledMiniHome = styled.div`
     & .mini-home-bg {
@@ -32,6 +33,10 @@ class MiniHome extends Component {
                 >
                     <Navbar />
                     <div className="container">
+                        <SmallScreen>
+                            <UberEats />
+                            <Phone />
+                        </SmallScreen>
                         <div className="home-title">
                             <h1 className="text-white">
                                 {this.props.homeTitle}
